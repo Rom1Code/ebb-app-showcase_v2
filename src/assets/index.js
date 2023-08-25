@@ -16,6 +16,9 @@ import ebb6 from"./ebb6.png"
 import ebb7 from"./ebb7.png"
 import ebb8 from"./ebb8.png"
 import ebb9 from"./ebb9.png"
+import androidQR from "./android_QR.jpg"
+import iosQR from "./ios_QR.jpg"
+import logo from "./ebb-logo.png"
 
 export default {
   homeHero,
@@ -35,5 +38,8 @@ export default {
   ebb6,
   ebb7,
   ebb8,
-  ebb9
+  ebb9,
+  androidQR,
+  iosQR,
+  logo
 };

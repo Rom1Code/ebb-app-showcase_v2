@@ -50,6 +50,17 @@ div {
 
 // First section
 
+.logo{
+  position: absolute;
+  top:0;
+  left:50%;
+  background-image: url("./assets/ebb-logo.png");
+  background-position: center;
+  background-size: 100% 100%;
+  width:250px;
+  height: 250px;
+}
+
 .hero-section {
   display: flex;
   flex-direction: row;
@@ -61,14 +72,15 @@ div {
   display: flex;
   flex-direction: column;
   flex: 1;
-  justify-content: space-around;
+  justify-content:flex-start;
   align-items: center;
   padding-left: 5%;
 
 
+
   .hero-left-span {
+    flex:2;
     display: flex;
-    flex:2.5;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -111,67 +123,258 @@ div {
   
     }
   }
+  .badge_container {
+    position: relative;
+    display: flex;
+    margin-top: 50px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 1.5s;
+
+    .badge_android{
+      background-image: url("./assets/Google_play_badge.png");
+      width: 250px;
+      height: 90px;
+      background-size: 100% 100%;
+      background-position: center;
+      transition: transform 0.5s ease;
   
+      &:hover {
+        transform: scale(1.1);
+      }
+  
+    }
+    
+    .badge_ios{
+      background-image: url("./assets/IOS_badge.png");
+      width: 250px;
+      height: 90px;
+      background-size: 100% 100%;
+      background-position: center;
+      transition: transform 0.5s ease;
+      
+      &:hover {
+        transform: scale(1.1);
+      }
+  
+    }
+  
+  }
 }
 
 
-.badge_container {
-  flex:1;
+
+.container {
+position: relative;
+
+}
+
+.btn-wrapper {
+  position: relative;
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: self-start;
-  gap: 2rem;
-  width: 100%;
-  opacity: 0;
-  animation: fadeIn 1s ease forwards;
-  animation-delay: 1.5s;
+  justify-content: space-around;
+  align-items: center;
+  width: 250px;
+  height: 70px;
+  border-radius: 50px;
+  border: 1px solid white;
+  color: white;
+  padding: 5px 10px;
+  font-size: 26px;
+  background-color: transparent;
+  transition: all .5s ease;
+  overflow: hidden;
 
-  .badge_android{
-    background-image: url("./assets/Google_play_badge.png");
-    width: 250px;
-    height: 90px;
+  &:hover {
+    background-color: white;
+    color: black  ;
+    cursor: pointer;
+  }
+
+  }
+
+  .android_qr {
+    background-image: url('./assets/android_QR.jpg');
+  }
+
+  .ios_qr {
+    background-image: url('./assets/ios_QR.jpg');
+  }
+
+  .logo_ios {
+    background-image: url('./assets/apple-fill_white.png');
     background-size: 100% 100%;
     background-position: center;
-    transition: transform 0.5s ease;
-
-    &:hover {
-      transform: scale(1.1);
-    }
-
+    width: 25px;
+    height: 25px;  
   }
   
-  .badge_ios{
-    background-image: url("./assets/IOS_badge.png");
-    width: 250px;
-    height: 90px;
+  .logo_android {
+    background-image: url('./assets/android-fill_white.png');
     background-size: 100% 100%;
     background-position: center;
-    transition: transform 0.5s ease;
-    
-    &:hover {
-      transform: scale(1.1);
-    }
-
+    width: 25px;
+    height: 25px;  
   }
 
-}
-.hero-img-container
+  .logo_transition {
+
+    transition: all .5s ease;
+  }
+
+  .btn-wrapper:hover .logo_ios{
+    background-image: url('./assets/apple-fill.png');
+  }
+  
+  .btn-wrapper:hover .logo_android{
+    background-image: url('./assets/android-fill.png');
+  }
+  
+  
+  .modal {
+    position: absolute;
+    background-color: white;
+    top: -260px;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    height: 250px;
+    border-radius: 10px;
+  }
+
+  .visible {
+    visibility: visible;
+  }
+  
+  .logo_ios_modal {
+    background-image: url('./assets/apple-fill.png');
+    background-size: 100% 100%;
+    background-position: center;
+    width: 20px;
+    height: 20px;  
+  }
+  
+  .logo_android_modal {
+    background-image: url('./assets/android-fill.png');
+    background-size: 100% 100%;
+    background-position: center;
+    width: 20px;
+    height: 20px;  
+  }
+  
+  .qr_android {
+    background-image: url('./assets/android_QR.jpg');
+    background-size: 100% 100%;
+    background-position: center;
+    width: 150px;
+    height: 150px;
+  }
+
+    .qr_ios {
+    background-image: url('./assets/ios_QR.jpg');
+    background-size: 100% 100%;
+    background-position: center;
+    width: 150px;
+    height: 150px;
+  }
+  
+  .android-line, .ios-line {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    gap:10px;
+    border-radius: 20px;
+    padding: 10px;
+    width:125px;
+    span{
+      color: black;
+      text-shadow: none;
+    }
+  
+    &:hover {
+      cursor: pointer;
+    }
+  
+  }
+  
+  .active {
+    border-radius: 50px;
+    background-color: rgb(212, 212, 212);
+  }
+  
+  
+  
+  .android-line:active .qr{
+    background-image: url('./assets/android_QR.jpg');
+  }
+  
+  .ios-line:active .qr{
+    background-image: url('./assets/ios_QR.jpg');
+  }
+  
+
+
+
+.hero-right
 {
-  display: flex;
   flex: 1;
-  justify-content: start;
-  align-items: center;
   animation: fadeIn 1s ease forwards;
   animation-delay: 1.5s;
   opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  .hero-img-container {
+    display: flex;
+    flex-direction: column;
+    flex:1;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
 
   .hero-img {
-    width: 65%;
-    height: auto;
-    padding-left: 50px;
+    background-image: url("./assets/ebb8.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 55%;
+    height: 55%;
+    // background-color: green;
+    animation: moveY 5s linear infinite;
+  }
+@keyframes moveY {
+  0% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(5px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  75% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
   
-    }
+}
 
 }
 
@@ -237,13 +440,12 @@ div {
   display: flex;
   flex-direction: column;
   flex: 1;
-  flex-direction: column;
   justify-content: space-around;
   align-items: center;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 
  
   .coach-left-text {
+    position: relative;
     display: flex;
     flex:2.5;
     flex-direction: column;
@@ -254,28 +456,154 @@ div {
     color: white;
     font-weight: bold;
     padding-left : 10rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 
     .title {
       font-size: 4rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
     }
 
     .desc {
+      display: flex ;
+      flex-direction: row;
+      position: relative;
       font-size: 2.5rem;
+      height: auto;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
 
-    ul{
-      font-size: 2rem;
-      padding-left: 2rem;
-      li {
-        line-height: 3.5rem;
 
-      }
-    }
   }
 
+  .words-container {
+    position: relative;
+    width: 330px;
+    overflow: hidden;
+    white-space: nowrap;
+    left : 10px;
+
+    .words{
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 0px;
+      font-size: 40px;
+      gap:10px;
+      animation: moveTop 8s ease-in-out infinite;
+      color: #0BB049;
+      background-color: white;
+      padding: 0px 0px 5px 10px;
+      overflow: hidden;
+      text-shadow: none
+    }
+
+  }
+
+
+}
+@keyframes moveTop {
+  0% {
+    top: 0px;
+    width: 0;
+  }
+  5% {
+    width: 0;
+  }
+  10% {
+    top: 0px;
+    width: 320px;
+  }
+  20% {
+    top: 0px;
+    width: 320px;
+  }
+  25% {
+    top: 0px;
+    width: 0;
+  }
+  30% {
+    top: 0px;
+    width: 0;
+  }
+  35% {
+    top: -56px;
+    width: 0;
+  }
+  40% {
+    top: -56px;
+    width: 300px;
+  }
+  45% {
+    top: -56px;
+    width: 300px;
+  }
+  50% {
+    top: -56px;
+    width: 0;
+  }
+  55% {
+    top: -113px;
+    width: 0;
+  }
+  60% {
+    top: -113px;
+    width: 350px;
+  }
+  65% {
+    top: -113px;
+    width: 350px;
+  }
+  70% {
+    top: -113px;
+    width: 0;
+  }
+  75% {
+    top: -113px;
+    width: 0;
+  }
+  80% {
+    top: -170px;
+    width: 0;
+  }
+  85% {
+    top: -170px;
+    width: 330px;
+  }
+  90% {
+    top: -170px;
+    width: 330px;
+  }
+  95% {
+    top: -170px;
+    width: 0;
+  }
+  100% {
+    top: 0;
+    width: 0;
+  }
+
+  
 }
 
+.coach-img-container
+{
+  display: flex;
+  flex: 1;
+  justify-content: start;
+  align-items: center;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 1.5s;
+  opacity: 0;
+
+
+  .coach-img {
+    width: 65%;
+    height: auto;
+    padding-left: 50px;
+    animation: moveY 5s linear infinite;
+
+    }
+}
 
 // Form
 
@@ -317,6 +645,49 @@ div {
     background-size: 100% 100%;
     background-position: center;
   }
+}
+
+
+.dwl_badge_container {
+  flex:1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 1.5s;
+
+  .badge_android{
+    background-image: url("./assets/Google_play_badge.png");
+    width: 250px;
+    height: 90px;
+    background-size: 100% 100%;
+    background-position: center;
+    transition: transform 0.5s ease;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+  }
+  
+  .badge_ios{
+    background-image: url("./assets/IOS_badge.png");
+    width: 250px;
+    height: 90px;
+    background-size: 100% 100%;
+    background-position: center;
+    transition: transform 0.5s ease;
+    
+    &:hover {
+      transform: scale(1.1);
+    }
+
+  }
+
 }
 
 
@@ -773,7 +1144,7 @@ div {
 }
 
 /* Média query pour les écrans de taille maximale 600px */
-@media (max-width: 500px) {
+@media (max-width: 400px) {
 
   .card {
     height: 75px;
@@ -832,15 +1203,6 @@ div {
     gap:10px;
     margin-top: 20px;
   }
-
-  .badge_android, .badge_ios{
-    width: 150px;
-    height: 50px;
-  }
-  
-
-  
-
 }
 
 

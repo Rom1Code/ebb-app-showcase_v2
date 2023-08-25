@@ -24,7 +24,14 @@ const Download = () => {
             <span>Télécharger </span>
             <span>(IOS)</span>
           </div> */}
-
+            <div className='dwl_badge_container'>
+                    <a href='#download'>  
+                     <div className='badge_android'></div>
+                    </a>
+                    <a href='#download'>
+                      <div className='badge_ios'></div>
+                    </a>
+            </div>
           
           {/* Recuperer le logo android et appel transparent  */}
 
