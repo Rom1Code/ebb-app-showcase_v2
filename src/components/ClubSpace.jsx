@@ -7,15 +7,14 @@ const ClubSpace = () => {
         <div className='coach-left'>
             <div className='coach-left-text' >
               <p className='title'>Espace dédié pour les membres du comité et les entraîneurs</p>
-              <div className='desc'>Accédez facilement aux               
+              <div className='desc'>Accédez facilement aux </div>
               <div className='words-container'>
-              <div className='words'>
-                <span>Licences joueurs</span>
-                <span>Liste de brûlage</span>
-                <span>Feuilles de match</span>
-                <span>Fautes techniques</span>
-              </div>
-              </div>
+                <div className='words'>
+                  <span>Licences joueurs</span>
+                  <span>Liste de brûlage</span>
+                  <span>Feuilles de match</span>
+                  <span>Fautes techniques</span>
+                </div>
               </div>
             </div>
         </div>        

@@ -19,7 +19,9 @@ const Form = () => {
                 <div className='form-textarea'>
                     <textarea name="message" placeholder="Message"  />
                 </div>
-                <button type="submit">Envoyer</button>
+                <div className='buttonContainer'>
+                  <button type="submit">Envoyer</button>
+                </div>
             </form>
         </div>
     </div>

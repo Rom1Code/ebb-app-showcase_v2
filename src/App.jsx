@@ -22,12 +22,12 @@ const App = () => {
       <ClubSpace />
       <Download />
       {/* <Features /> */}
-      <Form />
+      {/* <Form /> */}
 
-      {/* <div className="footer banner04">
-        <p>Contact :</p>
+      <div className="footer banner04">
+        <p>Contact : </p>
         <p> romain.noeppel@eckbolsheim-basket.fr</p>
-      </div> */}
+      </div>
     </>
   );
 }

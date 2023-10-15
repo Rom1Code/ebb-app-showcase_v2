@@ -65,7 +65,6 @@ div {
   display: flex;
   flex-direction: row;
   min-height: 100vh;
-  padding : 5px;
 }
 
 .hero-left {
@@ -135,43 +134,11 @@ div {
     opacity: 0;
     animation: fadeIn 1s ease forwards;
     animation-delay: 1.5s;
-
-    .badge_android{
-      background-image: url("./assets/Google_play_badge.png");
-      width: 250px;
-      height: 90px;
-      background-size: 100% 100%;
-      background-position: center;
-      transition: transform 0.5s ease;
-  
-      &:hover {
-        transform: scale(1.1);
-      }
-  
-    }
-    
-    .badge_ios{
-      background-image: url("./assets/IOS_badge.png");
-      width: 250px;
-      height: 90px;
-      background-size: 100% 100%;
-      background-position: center;
-      transition: transform 0.5s ease;
-      
-      &:hover {
-        transform: scale(1.1);
-      }
-  
-    }
-  
   }
 }
 
-
-
 .container {
 position: relative;
-
 }
 
 .btn-wrapper {
@@ -329,17 +296,15 @@ position: relative;
 .hero-right
 {
   flex: 1;
-  animation: fadeIn 1s ease forwards;
-  animation-delay: 1.5s;
+  animation: scaleIn 1s ease forwards;
+  animation-delay: 1s;
   opacity: 0;
   display: flex;
   justify-content: center;
   align-items: center;
 
-
   .hero-img-container {
     display: flex;
-    flex-direction: column;
     flex:1;
     justify-content: center;
     align-items: center;
@@ -379,7 +344,7 @@ position: relative;
 }
 
 
-// 3nd section
+// 3nd section DATA
 .data-section {
   display: flex;
   flex-direction: column;
@@ -395,7 +360,7 @@ position: relative;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 30px;
+  font-size: calc(16px + 20px + 30px);
   text-align: center;
 }
 
@@ -428,7 +393,7 @@ position: relative;
 }
 
 
-// 4tn section
+// 4tn section CLUB
 
 .coach-section {
   display: flex;
@@ -481,6 +446,7 @@ position: relative;
     overflow: hidden;
     white-space: nowrap;
     left : 10px;
+    height: 50px;
 
     .words{
       display: flex;
@@ -489,11 +455,11 @@ position: relative;
       top: 0px;
       font-size: 40px;
       gap:10px;
-      animation: moveTop 8s ease-in-out infinite;
+      animation: moveTop 12s ease-in-out infinite;
       color: #0BB049;
       background-color: white;
       padding: 0px 0px 5px 10px;
-      overflow: hidden;
+      // overflow: hidden;
       text-shadow: none
     }
 
@@ -506,34 +472,35 @@ position: relative;
     top: 0px;
     width: 0;
   }
-  5% {
+  5.55% {
+    top: 0;
     width: 0;
   }
-  10% {
-    top: 0px;
+  11.11% {
+    top: 0;
     width: 320px;
   }
-  20% {
-    top: 0px;
+  16.66% {
+    top: 0;
     width: 320px;
   }
-  25% {
-    top: 0px;
+  22.22% {
+    top: 0;
     width: 0;
   }
-  30% {
-    top: 0px;
+  27.77% {
+    top: 0;
     width: 0;
   }
-  35% {
+  33.33% {
     top: -56px;
     width: 0;
   }
-  40% {
+  38.88% {
     top: -56px;
     width: 300px;
   }
-  45% {
+  44.44% {
     top: -56px;
     width: 300px;
   }
@@ -541,39 +508,35 @@ position: relative;
     top: -56px;
     width: 0;
   }
-  55% {
+  55.55% {
     top: -113px;
     width: 0;
   }
-  60% {
+  61.11% {
     top: -113px;
     width: 350px;
   }
-  65% {
+  66.66% {
     top: -113px;
     width: 350px;
   }
-  70% {
+  72.22% {
     top: -113px;
     width: 0;
   }
-  75% {
-    top: -113px;
-    width: 0;
-  }
-  80% {
+  77.77% {
     top: -170px;
     width: 0;
   }
-  85% {
+  83.33% {
     top: -170px;
     width: 330px;
   }
-  90% {
+  88.88% {
     top: -170px;
     width: 330px;
   }
-  95% {
+  94.44% {
     top: -170px;
     width: 0;
   }
@@ -581,8 +544,6 @@ position: relative;
     top: 0;
     width: 0;
   }
-
-  
 }
 
 .coach-img-container
@@ -648,49 +609,6 @@ position: relative;
 }
 
 
-.dwl_badge_container {
-  flex:1;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  width: 100%;
-  opacity: 0;
-  animation: fadeIn 1s ease forwards;
-  animation-delay: 1.5s;
-
-  .badge_android{
-    background-image: url("./assets/Google_play_badge.png");
-    width: 250px;
-    height: 90px;
-    background-size: 100% 100%;
-    background-position: center;
-    transition: transform 0.5s ease;
-
-    &:hover {
-      transform: scale(1.1);
-    }
-
-  }
-  
-  .badge_ios{
-    background-image: url("./assets/IOS_badge.png");
-    width: 250px;
-    height: 90px;
-    background-size: 100% 100%;
-    background-position: center;
-    transition: transform 0.5s ease;
-    
-    &:hover {
-      transform: scale(1.1);
-    }
-
-  }
-
-}
-
-
 .form-right {
   flex: 1;
   display: flex;
@@ -708,7 +626,7 @@ position: relative;
 
     input {
       height: 2.5rem;
-      width: 20rem;
+      width: 45%;
       font-size: 1.2rem;
 
       border-radius: 10px;
@@ -721,8 +639,6 @@ position: relative;
         7px 10px 20px 10px #0003;
       }
     }
-
-
     
   }
 
@@ -746,20 +662,24 @@ position: relative;
     }
   }
 
-  button {
-    width: 15%;
-    height: 50px;
-    font-size: 1.2rem;
-    border-radius: 10px;
-    border: none;
-    box-shadow: 7px 10px 20px 10px #0003;
-    transition: box-shadow 0.3s ease;
-    &:hover {
-      box-shadow: 7px 10px 20px 10px #0003,
-      7px 10px 20px 10px #0003;
+  .buttonContainer{
+    button {
+      width: 100%;
+      height: 50px;
+      font-size: 1.5rem;
+      color: #0BB049;
+      font-weight: 600;
+      border-radius: 10px;
+      border: none;
+      box-shadow: 7px 10px 20px 10px #0003;
+      transition: box-shadow 0.3s ease;
+      &:hover {
+        box-shadow: 7px 10px 20px 10px #0003,
+        7px 10px 20px 10px #0003;
+      }
     }
-
   }
+
 
 }
 
@@ -966,21 +886,47 @@ position: relative;
   align-items: center;
 }
 
-.btn-dwl {
-  /* display: flex;
-  flex-direction: column; */
-  padding: 20px;
-  color: white;
-  background-color: #0bb049;
-  font-weight: bold;
-  font-size: 20px;
-  border: none;
-  border-radius: 10px;
-  align-self: center;
-}
+.dwl_badge_container {
+  flex:1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  // opacity: 0;
+  // animation: fadeIn 1s ease forwards;
+  // animation-delay: 1.5s;
 
-.btn-dwl:hover {
-  cursor: pointer;
+  .badge_android{
+    background-image: url("./assets/Google_play_badge.png");
+    width: 250px;
+    height: 90px;
+    background-size: 100% 100%;
+    background-position: center;
+    transition: transform 0.5s ease;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+    }
+
+  }
+  
+  .badge_ios{
+    background-image: url("./assets/IOS_badge.png");
+    width: 250px;
+    height: 90px;
+    background-size: 100% 100%;
+    background-position: center;
+    transition: transform 0.5s ease;
+    
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+    }
+  }
+
 }
 
 .download-img {
@@ -1005,6 +951,8 @@ position: relative;
   padding-bottom: 50px;
   font-size: 30px;
   height: 200px;
+  gap: 10px
+
 }
 
 .wave {
@@ -1026,6 +974,370 @@ position: relative;
 }
 
 
+
+@media (max-width: 800px) {
+
+
+  .logo{
+    position: relative;
+    width:125px;
+    height: 125px;
+    left: 38%;
+  }
+  
+  .hero-section {
+    display: flex;
+    flex-direction: column;
+    // padding-top: 125px;
+  }
+  
+  .hero-left {
+ 
+    .hero-left-span {
+      font-size: 2rem;
+  
+      .hero-desc {
+        font-size: 1.5rem;
+        margin-top: 0rem;
+
+      }
+  
+    }
+    .badge_container {
+      display: none;
+
+    }
+  }
+  
+  .btn-wrapper {
+    display: none;
+    }
+  
+  .hero-right
+  {  
+    flex: 1;
+  
+    .hero-img-container {
+      height: 50vh;
+    }
+  
+    .hero-img {
+      background-image: url("./assets/ebb8.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+      width: 65%;
+      height: 65%;
+  
+      animation: none;
+    }
+
+  
+  }
+  
+  
+  // 3nd section DATA
+  
+  
+  .section-data-container {
+    flex-direction: column;
+  }
+  
+  .data-card {
+    justify-content: center;
+
+  
+    h1 {
+      font-size: 2rem;
+    }
+  
+    h2 {
+      font-size:2rem;
+    }
+  }
+  
+  
+  // 4tn section CLUB
+  
+  .coach-section {
+    flex-direction: column;
+  }
+  
+  .coach-left {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+  
+   
+    .coach-left-text {
+      flex:2.5;
+      justify-content: center;
+      align-items: center;
+      gap:2rem;
+      padding-left : 0rem;
+
+      .title {
+        font-size: 2rem;
+        text-align: center;
+      }
+  
+      .desc {
+        font-size: 1.8rem;
+      }
+    }
+  
+    .words-container {
+      position: relative;
+      width: 250px;
+      // overflow: hidden;
+      white-space: nowrap;
+      left : 10px;
+      height: 40px;
+  
+      .words{
+        font-size: 30px;
+      }
+
+      @keyframes moveTop {
+        0% {
+          top: 0px;
+          width: 0;
+        }
+        5.55% {
+          top: 0;
+          width: 0;
+        }
+        11.11% {
+          top: 0;
+          width: 320px;
+        }
+        16.66% {
+          top: 0;
+          width: 320px;
+        }
+        22.22% {
+          top: 0;
+          width: 0;
+        }
+        27.77% {
+          top: 0;
+          width: 0;
+        }
+        33.33% {
+          top: -40px;
+          width: 0;
+        }
+        38.88% {
+          top: -40px;
+          width: 300px;
+        }
+        44.44% {
+          top: -40px;
+          width: 300px;
+        }
+        50% {
+          top: -40px;
+          width: 0;
+        }
+        55.55% {
+          top: -87px;
+          width: 0;
+        }
+        61.11% {
+          top: -87px;
+          width: 350px;
+        }
+        66.66% {
+          top: -87px;
+          width: 350px;
+        }
+        72.22% {
+          top: -87px;
+          width: 0;
+        }
+        77.77% {
+          top: -130px;
+          width: 0;
+        }
+        83.33% {
+          top: -130px;
+          width: 330px;
+        }
+        88.88% {
+          top: -130px;
+          width: 330px;
+        }
+        94.44% {
+          top: -130px;
+          width: 0;
+        }
+        100% {
+          top: 0;
+          width: 0;
+        }
+      }
+    }
+  }
+  
+  .coach-img-container
+  {
+    justify-content: center;
+  
+    .coach-img {
+      width: 85%;
+      }
+  }
+  
+  // Form
+  
+  .form-section {
+    flex-direction: column;
+  }
+  
+  .form-left {
+    padding: 0 1rem;
+
+    .form-left-text {
+    padding-left : 0rem;
+
+      .title {
+        font-size: 1.8rem;
+        text-align: center;
+      }
+    }
+  }
+
+  .form-right {
+    .buttonContainer{
+      button {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+
+
+  // SectionWrapper
+
+  .section,
+  .section-reverse {
+  flex-direction: column;
+  padding: 0 0%;
+
+  }
+  .section-sub-reverse {
+    align-items: center;
+  }
+  
+  .section-sub {
+    align-items: center;
+  }
+  
+    
+  .section-text,
+  .section-text-reverse {
+
+    gap: 1rem
+  }
+  
+  .section-text-reverse {
+    text-align: center;
+  }
+
+  
+  
+  .img-wrapper-reverse {
+    width: 60%;
+    height: auto;
+  }
+  
+  .img-wrapper {
+    width: 60%;
+    height: auto;
+    padding-left: 0px;
+  }
+  
+  
+  .section-title {
+    font-weight: bold;
+    font-size: 30px;
+  }
+  
+  .section-desc {
+    font-size: 25px;
+  }
+  
+  .img {
+    margin-left: -10px;
+  }
+  
+  .img:hover {
+    cursor: pointer;
+  }
+  
+  
+  .btn {
+    display: flex;
+    justify-content: center;
+    align-content: flex-start;
+  }
+  
+  
+  .card-img {
+    width: 70%;
+    height: auto;
+  }
+  
+  .dwl_badge_container {
+    flex:1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    // opacity: 0;
+    // animation: fadeIn 1s ease forwards;
+    // animation-delay: 1.5s;
+  
+    .badge_android{
+      width: 175px;
+      height: 60px;
+    }
+    
+    .badge_ios{
+      width: 175px;
+      height: 60px;
+    }
+  }
+  
+  .text {
+    font-size:  20px;
+  }
+  
+  .dwl_badge_container {
+    flex-direction: column;
+
+  }
+  
+  .img2 {
+    align-self: center;
+    width: 65%;
+    height: auto;
+  }
+
+
+  .footer {
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 18px;
+  }
+}
+
+
 @keyframes waveAnimation {
   0% {
     transform: translateX(0);
@@ -1034,177 +1346,6 @@ position: relative;
     transform: translateX(-100%);
   }
 }
-
-
-
-/* Média query pour les écrans de taille maximale 900px */
-@media (max-width: 900px) {
-  .section, .section-reverse {
-    flex-direction: column;
-    height: auto;
-    border-bottom-right-radius: 0% 0%;
-
-  }
-
-  .section-img {
-    justify-content: center;
-  }
-
-  .section-img-reverse {
-    justify-content: center;
-
-  }
-
-  .section-sub, .section-sub-reverse {
-    align-items: center;
-  }
-
-  .section-text, .section-text-reverse {
-    text-align: center;
-    width: 100%;
-  }
-
-  .card {
-    font-size: 20px;
-    text-align: center;
-    height: 150px;
-    width: 150px;
-  
-  }
-
-  .img-wrapper {
-    width: 400px;
-    height: auto;
-    margin-right: 70px;
-
-  }
-
-  .img-wrapper-reverse {
-    width: 400px;
-    height: auto;
-    margin-left: 70px;
-  }
-
-  .img2 {
-    width: 400px;
-    height: auto;
-  }
-
-  .badge_container {
-    margin-top: 70px;  }
-}
-
-
-
-
-/* Média query pour les écrans de taille maximale 600px */
-@media (max-width: 600px) {
-  .section-title, .text {
-    font-size: 40px;
-  }
-  .section-desc {
-    font-size: 20px;
-  }
-  .img {
-    margin-left: 0;
-  }
-  .text {
-    font-size: 20px;
-  }
-  .desc {
-    text-align: center;
-  }
-
-  .card {
-    height: 125px;
-    width: 125px;
-    font-size: 15px;
-    text-align: center;
-  }
-
-  .img-wrapper {
-    width: 400px;
-    height: auto;
-  }
-
-  .img-wrapper-reverse {
-    width: 400px;
-    height: auto;
-  }
-
-  .img2 {
-    align-self: center;
-    width: 350px;
-    height: auto;
-  }
-  .footer p {
-    font-size: 25px;
-  }
-
-}
-
-/* Média query pour les écrans de taille maximale 600px */
-@media (max-width: 400px) {
-
-  .card {
-    height: 75px;
-    width: 75px;
-    font-size: 10px;
-    text-align: center;
-  }
-
-  .img-wrapper-reverse {
-    width: 325px;
-    height: auto;
-    margin-left: 70px;
-  }
-
-
-  .footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 0px;
-
-  }
-}
-
-
-/* Média query pour les écrans de taille maximale 400px */
-@media (max-width: 400px) {
-  .section-title {
-    font-size: 30px;
-  }
-  .section-desc {
-    font-size: 20px;
-  }
-
-  .img-wrapper {
-    width: 325px;
-    height: auto;
-    margin-right: 70px;
-  }
-
-  .img-wrapper-reverse {
-    width: 300px;
-    height: auto;
-    margin-left: 70px;
-  }
-
-  .footer p {
-    font-size: 20px;
-    text-align: center;
-  }
-
-  .badge_container {
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    gap:10px;
-    margin-top: 20px;
-  }
-}
-
 
 
 
@@ -1223,11 +1364,22 @@ position: relative;
 @keyframes fadeIn {
   from {
     opacity : 0;
-
   }
 
   to{
     opacity : 1;
   }
-  
 }
+
+@keyframes scaleIn {
+  from {
+    opacity : 0;
+    transform: scale(2);
+  }
+
+  to{
+    opacity : 1;
+    transform: scale(1);
+  }
+}
+
